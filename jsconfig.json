@@ -1,0 +1,10 @@
+
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "checkJs": false
+  },
+  "exclude": ["node_modules", ".next"]
+}

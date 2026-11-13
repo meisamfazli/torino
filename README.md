@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Torino - سامانه رزرو تور
 
-## Getting Started
+تورینو یک وب‌اپلیکیشن فارسی برای جست‌وجو، مشاهده جزئیات و خرید تورهای گردشگری داخلی و خارجی است. این پروژه را به‌عنوان پروژه نهایی بوت‌کمپ بوتواستارت با Next.js و JavaScript ساخته‌ام.
 
-First, run the development server:
+## تکنولوژی‌های استفاده‌شده
+
+- HTML و CSS
+- JavaScript و React
+- Next.js 16
+- Tailwind CSS
+- Axios
+- React Query (TanStack Query)
+- React Toastify
+- Lucide React
+- Express.js برای بک‌اند
+
+## امکانات پروژه
+
+- نمایش و جست‌وجوی تورهای گردشگری
+- مشاهده جزئیات، تاریخ و قیمت تورها
+- ورود با شماره موبایل و کد تأیید (OTP)
+- خرید تور و نمایش نتیجه خرید
+- مشاهده و ویرایش اطلاعات پروفایل
+- مشاهده تورهای خریداری‌شده
+- مشاهده تاریخچه تراکنش‌ها
+- رابط کاربری فارسی، راست‌به‌چپ و واکنش‌گرا
+
+## ساختار پروژه
+
+فرانت‌اند در پوشه اصلی پروژه قرار دارد و بک‌اند در پوشه `backend` است.
+
+## نصب و اجرای پروژه
+
+برای اجرای پروژه باید Node.js و npm نصب باشند. فرانت‌اند و بک‌اند را در دو ترمینال جداگانه اجرا کنید.
+
+### ۱. اجرای بک‌اند
+
+در ترمینال اول، وارد پوشه بک‌اند شوید و وابستگی‌ها را نصب کنید:
+
+```bash
+cd backend
+npm install
+```
+
+از روی فایل `backend/.env.example` یک فایل به نام `backend/.env` بسازید و مقدار `JWT_SECRET` را با یک مقدار محرمانه و مخصوص خودتان جایگزین کنید. تنظیمات نمونه:
+
+```env
+PORT=6501
+JWT_SECRET=your-own-secret
+```
+
+سپس بک‌اند را اجرا کنید:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+بک‌اند باید در آدرس `http://localhost:6501` اجرا شود.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ۲. اجرای فرانت‌اند
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+در ترمینال دوم، از پوشه اصلی پروژه وابستگی‌ها را نصب و برنامه را اجرا کنید:
 
-## Learn More
+```bash
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+سایت در آدرس `http://localhost:3000` در دسترس است.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+در PowerShell ویندوز، اگر اجرای `npm` به دلیل Execution Policy مسدود شد، می‌توانید از `npm.cmd` استفاده کنید؛ مثلاً `npm.cmd run dev`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## بک‌اند و ارتباط با API
 
-## Deploy on Vercel
+بک‌اند این پروژه با Express.js ساخته شده و توسط مدرس بوت‌کمپ ارائه شده است. با اجازه مدرس، کد بک‌اند نیز در این مخزن قرار می‌گیرد.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+فرانت‌اند از طریق Axios در فایل `lib/axios.js` به آدرس `http://localhost:6501` درخواست می‌فرستد. برای استفاده از امکاناتی مانند ورود و خرید تور، بک‌اند باید هم‌زمان در حال اجرا باشد.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+فایل‌های `.env` و داده‌های شخصی یا آزمایشی کاربران در مخزن منتشر نمی‌شوند. فایل `.env.example` فقط نمونه تنظیمات موردنیاز است.
+
+## بررسی پروژه
+
+برای بررسی کد و ساخت نسخه نهایی فرانت‌اند می‌توان از دستورهای زیر استفاده کرد:
+
+```bash
+npx eslint .
+npm run build
+```
+
+## ارتباط با من
+
+ایمیل: meisamfazli71@gmail.com

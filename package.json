@@ -13,11 +13,15 @@
     "@tanstack/react-query": "^5.105.0",
     "axios": "^1.21.0",
     "input-otp": "^1.5.0",
+    "lucide-react": "^1.70.0",
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-hook-form": "^7.91.0",
-    "yup": "^1.7.1"
+    "react-loader-spinner": "^8.0.2",
+    "react-toastify": "^11.2.0",
+    "yup": "^1.7.1",
+    "zaman": "^2.1.1"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",

@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# backend
+/backend/node_modules/
+/backend/.env
+/backend/.env.*
+!/backend/.env.example
+
+# backend test data
+/backend/DB/User.json
+/backend/DB/Order.json
+/backend/DB/Transaction.json
+/backend/DB/Basket.json
